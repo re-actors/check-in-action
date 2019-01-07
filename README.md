@@ -1,18 +1,18 @@
-An action that runs PyCodeStyle over python code. If there are errors found in the Python code then the action will fail.
+An action that runs check-in tool. One can post custom Checks updates to GitHub using it.
 
 Example workflow:
 
 ```
 workflow "New workflow" {
   on = "push"
-  resolves = ["action"]
+  resolves = ["check-in-action"]
 }
 
-action "action" {
-  uses = "andymckay/pycodestyle-action@master"
+action "check-in-action" {
+  uses = "re-actors/check-in-action@master"
 }
 ```
 
-https://pypi.org/project/pycodestyle/
+https://pypi.org/project/check-in/
 
-PyCodeStyle is the library formally called pep8.
+check-in is a CLI which allows one to post to GitHub using Checks API!
